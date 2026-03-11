@@ -53,11 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const end = start + productsPerPage;
 
         products.forEach(product => {
-            product.style.display = "none";
+        product.parentElement.style.display = "none";
         });
 
         filtered.slice(start, end).forEach(product => {
-            product.style.display = "";
+        product.parentElement.style.display = "";
         });
 
         updatePagination(filtered.length);
