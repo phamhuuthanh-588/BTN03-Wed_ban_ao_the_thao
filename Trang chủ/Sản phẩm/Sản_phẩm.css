@@ -135,7 +135,7 @@ html,body{
 
 .product-card{
     position: relative;
-    overflow: visible;
+    overflow: hidden;
 
     background: rgba(12, 19, 29, 0.6);
     backdrop-filter: blur(10px);
@@ -148,8 +148,8 @@ html,body{
 }
 
 .product-card:hover{
-    transform: scale(1.05);
-    z-index: 20;
+    transform: scale(1.12);
+    z-index: 10;
 }
 
 .product-image{
@@ -250,7 +250,7 @@ html,body{
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 25px;
-    display: flex;
+    display: none;
     gap: 20px;
     color: white;
 
@@ -422,9 +422,4 @@ html,body{
 .support i:hover {
     background: #41DC9C;
     color: #0c131d;
-}
-
-.product-link{
-text-decoration:none;
-color:inherit;
 }

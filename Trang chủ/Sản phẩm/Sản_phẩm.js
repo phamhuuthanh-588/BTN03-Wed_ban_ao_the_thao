@@ -29,12 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 ?.innerText.toLowerCase() || "";
 
             const brandMatch =
-                currentBrand === "all" ||
-                product.dataset.brand === currentBrand;
+            currentBrand === "all" ||
+            product.dataset.brand.toLowerCase() === currentBrand;
 
             const categoryMatch =
-                currentCategory === "all" ||
-                product.dataset.category === currentCategory;
+            currentCategory === "all" ||
+            product.dataset.category.toLowerCase() === currentCategory;
 
             const searchMatch =
                 name.includes(currentKeyword.toLowerCase());
@@ -53,11 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const end = start + productsPerPage;
 
         products.forEach(product => {
-        product.parentElement.style.display = "none";
+        product.style.display = "none";
         });
 
         filtered.slice(start, end).forEach(product => {
-        product.parentElement.style.display = "";
+        product.style.display = "";
         });
 
         updatePagination(filtered.length);
