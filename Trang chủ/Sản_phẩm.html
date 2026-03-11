@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm</title>
+    <link rel="icon" href="/Trang chủ/Img/Trang chủ/favicon1.png" type="image/png">
+    <link rel="stylesheet" href="/Trang chủ/fontawesome-free-7.1.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/Trang chủ/Trang_chủ.css">
+    <link rel="stylesheet" href="/Trang chủ/Sản phẩm/Sản_phẩm.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header"> 
+        <nav class="thanh_header">
+            <div id="logo_header-search">
+                <div class="ham_menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="logo_header">
+                    <a href="/index.html">
+                        <img id="img1"src="/Trang chủ/Img/Header/logoheader.png" alt="logo_header">
+                        <img id="img2"src="/Trang chủ/Img/Trang chủ/Logo01.png" alt="">
+                    </a>
+                </div>
+        
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                    <input id="input_search" type="search" placeholder="Tìm kiếm sản phẩm">
+                </div>
+            </div>     
+
+            <div id="nav">
+                <div id="nav-button_dang_nhap">
+                    <a href="/Trang chủ/Đăng nhập/Đăng_nhập.html">
+                        <i class="fa-regular fa-user" style="color: #000000; font-size: 18px;"></i>
+                        <span>Đăng nhập</span>
+                    </a>
+                </div>
+                <div id=" gioi-thieu"><a href="/Trang chủ/Giới thiệu/">Giới thiệu</a></div>
+                <div id="dich_vu"><a href="/Trang chủ/Dịch vụ/">Dịch vụ</a></div>
+                <div id=" san_pham"><a href="/Trang chủ/Sản phẩm/Sản_phẩm.html">Sản phẩm</a></div>
+                <div id="lien_he"><a href="/Trang chủ/Liên hệ/">Liên hệ</a></div> 
+            </div>
+
+            <div id="dang_nhap-cart">
+                <div class="search_mini">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div id="cart">
+                    <a href=".">
+                        <i class="fa-solid fa-cart-shopping" style="color: #000000; font-size: 18px;"></i>
+                        <span> Giỏ hàng</span>
+                    </a>
+                </div>
+
+                <div id="button_dang_nhap">
+                    <a href="/Trang chủ/Đăng nhập/Đăng_nhập.html">
+                        <i class="fa-regular fa-user" style="color: #000000; font-size: 18px;"></i>
+                        <span>Đăng nhập</span>
+                    </a>
+                </div>
+            </div> 
+        </nav>
+    </header>
+    
+    <main>
+        <div class="logo_main">
+
+            <div class="dssp">
+                <h1>DANH SÁCH SẢN PHẨM</h1>
+                <p>Khám phá các mẫu áo thể thao mới nhất</p>
+            </div>
+
+            <div class="search_sp">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Tìm kiếm sản phẩm"> 
+            </div>
+            <div class="filter">
+                <button class="filter-btn active" data-type="all" data-value="all">Tất cả</button>
+                <button class="filter-btn" data-type="brand" data-value="nike">Nike</button>
+                <button class="filter-btn" data-type="brand" data-value="adidas">Adidas</button>
+                <button class="filter-btn" data-type="brand" data-value="puma">Puma</button>
+                <button class="filter-btn" data-type="brand" data-value="fila">Fila</button>
+                <button class="filter-btn" data-type="brand" data-value="ua">Under Armour</button>
+                <button class="filter-btn" data-type="category" data-value="dt">Đội tuyển</button>
+                <button class="filter-btn" data-type="category" data-value="clb">Câu lạc bộ</button>
+            </div>
+
+            <div class="products-wrapper">
+
+                <div class="product-card" data-brand="puma" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/ManCity_Puma.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Puma</div>
+                        <div class="product-name">Áo Đấu Manchester City</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                            <p class="desc">Áo bóng đá sân nhà CLB Manchester City</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="adidas" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/Real_Adidas.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Adidas</div>
+                        <div class="product-name">Áo Đấu Real Madrid</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                            <p class="desc">Áo bóng đá sân nhà CLB Real Madrid</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="nike" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/PSG_Nike.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Nike</div>
+                        <div class="product-name">Áo Đấu Paris Saint-Germain</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                            <p class="desc">Áo bóng đá sân nhà CLB Paris Saint-Germain</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="nike" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/Barcelona_Nike.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Nike</div>
+                        <div class="product-name">Áo Đấu FC Barcelona</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+
+                                <p class="desc">Áo bóng đá sân nhà CLB Barcelona</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="puma" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/ACMilan_Puma.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Puma</div>
+                        <div class="product-name">Áo Đấu AC Milan</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                            
+                                <p class="desc">Áo bóng đá sân nhà CLB AC Milan</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="adidas" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/Ajax_Adidas.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Adidas</div>
+                        <div class="product-name">Áo Đấu Ajax Amsterdam</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+
+                                <p class="desc">Áo bóng đá sân nhà Ajax Amsterdam</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="nike" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/Aletico_Nike.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Nike</div>
+                        <div class="product-name">Áo Đấu Alectico Madrid</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                            
+                                <p class="desc">Áo bóng đá sân nhà CLB Alectico Madrid</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="adidas" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/Arsenal_Adidas.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Adidas</div>
+                        <div class="product-name">Áo Đấu Arsenal</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                            
+                                <p class="desc">Áo bóng đá sân nhà CLB Arsenal</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="nike" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/Chelsea_Nike.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Nike</div>
+                        <div class="product-name">Áo Đấu Chelsea</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+
+                                <p class="desc">Áo bóng đá sân nhà CLB Chelsea</p>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-brand="puma" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/Dortmund_Puma.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Puma</div>
+                        <div class="product-name">Áo Đấu Borussia Dortmund</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                        
+                                <p class="desc">Áo bóng đá sân nhà CLB Borussia Dortmund</p>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-brand="adidas" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/FCBayern_Adidas.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Adidas</div>
+                        <div class="product-name">Áo Đấu FC Bayern Munich</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+
+                                <p class="desc">Áo bóng đá sân nhà CLB Bayern Munich </p>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-brand="nike" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/Inter_Nike.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Nike</div>
+                        <div class="product-name">Áo Đấu Inter Milan</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                
+                                <p class="desc">Áo bóng đá sân nhà CLB Inter Milan</p>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-brand="adidas" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/Juventus_Adidas.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Adidas</div>
+                        <div class="product-name">Áo Đấu Juventus</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+
+                                <p class="desc">Áo bóng đá sân nhà CLB Juventus</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="adidas" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/Liverpool_Adidas.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Adidas</div>
+                        <div class="product-name">Áo Đấu Liverpool</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                            
+                            <p class="desc">Áo bóng đá sân nhà CLB Liverpool</p>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-brand="puma" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/Marseille_Puma.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Puma</div>
+                        <div class="product-name">Áo Đấu Olympique Marseille</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                            
+                                <p class="desc">Áo bóng đá sân nhà CLB Olympique Marseille</p>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-brand="adidas" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/Palmeiras_Adidas.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Adidas</div>
+                        <div class="product-name">Áo Đấu Palmeiras</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                            
+                                <p class="desc">Áo bóng đá sân nhà CLB Palmeiras</p>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-brand="nike" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/Totenham_Nike.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Adidas</div>
+                        <div class="product-name">Áo Đấu Totenham Hotspur</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                            
+                                <p class="desc">Áo bóng đá sân nhà CLB Totenham Hotspur</p>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-brand="fila" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/Betway_Fila.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Fila</div>
+                        <div class="product-name">Áo Đấu Betway</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                            
+                                <p class="desc">Áo bóng đá sân nhà CLB Betway</p>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-brand="ua" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/FCAtlas_UA.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Under Armour</div>
+                        <div class="product-name">Áo Đấu FC Atlas</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                            
+                                <p class="desc">Áo bóng đá sân nhà CLB FC Atlas</p>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-brand="ua" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/FCColo-Colo_UA.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Under Armour</div>
+                        <div class="product-name">Áo Đấu FC Colo-Colo</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                            
+                                <p class="desc">Áo bóng đá sân nhà CLB FC Colo-Colo</p>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-brand="ua" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/FCEmelec_UA.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Under Armour</div>
+                        <div class="product-name">Áo Đấu FCEmelex</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                            
+                                <p class="desc">Áo bóng đá sân nhà CLB FC Emelec</p>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-brand="ua" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/FCOmonia_UA.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Under Armour</div>
+                        <div class="product-name">Áo Đấu FC Omonia</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                            <div class="detail-left">
+                                <img src="/Trang chủ/Sản phẩm/Img_SP/FCOmonia_UA.jpg">
+                                <div class="support">
+                                    <span>Tư vấn</span>
+                                    <i class="fa-brands fa-facebook"></i>
+                                    <i class="fa-brands fa-facebook-messenger"></i>
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                            </div>
+
+                            <div class="detail-right">
+                                <h3>Áo Đấu FC Omonia</h3>
+                                <div class="price">
+                                    <span class="new">799.000đ</span>
+                                    <span class="old">999.000đ</span>
+                                    <span class="mini-discount">-20%</span>
+                                </div>
+
+                                <p class="brand">Hãng: Under Armour</p>
+                                <p class="desc">
+                                Áo bóng đá sân nhà CLB FC Omonia
+                                </p>
+
+                                <div class="sizes">
+                                    <span>S</span>
+                                    <span>M</span>
+                                    <span>L</span>
+                                    <span>XL</span>
+                                </div>
+
+                                <div class="quantity">
+                                    <span>Số lượng</span>
+                                    <div class="qty-box">
+                                        <button>-</button>
+                                        <span class="qty-number">1</span>
+                                        <button>+</button>
+                                    </div>
+                                </div>
+
+                                <button class="add-cart">Thêm vào giỏ hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-brand="ua" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/FCSt. Pauli_UA.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Under Armour</div>
+                        <div class="product-name">Áo Đấu FC St. Pauli</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                            
+                                <p class="desc">Áo bóng đá sân nhà CLB FC St. Pauli</p>
+ 
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-brand="ua" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/FCToluca_UA.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Under Armour</div>
+                        <div class="product-name">Áo Đấu FC Toluca</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                        
+                                <p class="desc">Áo bóng đá sân nhà CLB FC Toluca</p>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-brand="fila" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/Fiorentina_Fila(cam).jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Fila</div>
+                        <div class="product-name">Áo Tập Fiorentina</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                            
+                                <p class="desc">Áo bóng đá tập luyện CLB Fiorentina</p>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-brand="fila" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/Fiorentina_Fila(đen).jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Fila</div>
+                        <div class="product-name">Áo Đấu Fiorentina Sân Nhà</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+
+                                <p class="desc">Áo bóng đá sân nhà CLB Fiorentina</p>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-brand="fila" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/Fiorentina_Fila.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Fila</div>
+                        <div class="product-name">Áo Đấu Fiorentina Sân Khách</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                            
+                                <p class="desc">Áo bóng đá sân khách CLB Fiorentina</p>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-brand="puma" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/Gosbi_puma.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Puma</div>
+                        <div class="product-name">Áo Đấu Gosbi</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                    
+                                <p class="desc">Áo bóng đá sân nhà CLB Gosbi</p>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-brand="fila" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/Leeds_Fila.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Fila</div>
+                        <div class="product-name">Áo Đấu Leeds United</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                            
+                                <p class="desc">Áo bóng đá sân nhà CLB Leeds United</p>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-brand="Fila" data-category="clb">
+                    <div class="product-image">
+                        <span class="discount-badge">-20%</span>
+                        <img src="/Trang chủ/Sản phẩm/Img_SP/Westham_Fila.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Fila</div>
+                        <div class="product-name">Áo Đấu West Ham United</div>
+                        <div class="product-price">799.000đ</div>
+
+                        <div class="hover-detail">
+                            
+                                <p class="desc">Áo bóng đá sân nhà CLB West Ham United</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pagination" id="pagination"></div>
+
+        </div>
+        
+    </main>
+    <script src="./Trang chủ/Trang_chủ.js"></script>
+    <script src="Sản_phẩm.js"></script>
+
+</body>
+</html>
