@@ -1,0 +1,261 @@
+
+     html {
+  scroll-behavior: smooth;
+    }
+     /* Thiết lập ảnh nền full màn hình */
+    body {
+    background-image: url('../img/Đăng\ nhập/background-dang-nhap.png');
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed; 
+    margin: 0;
+    }
+    #thanhtacvu {
+    display: flex;
+    align-items: center; 
+    justify-content: center;  
+    margin: 30px auto;
+    
+}
+.contact h1{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    color:rgb(232, 238, 235);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-family:'Segoe UI'; 
+
+
+
+}
+.contact h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    color:rgb(241, 247, 241);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-family:'Segoe UI';
+}
+.danhgia{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+.judgein {
+  width: 600px; /* Thêm dòng này để nới rộng chiếc hộp, tạo không gian */
+  max-width: 100%;
+  padding: 50px;
+  background-color: #1a1e24; 
+  border-radius: 15px;
+  color: white;
+
+}
+.judgeout{
+    padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.1);   
+  backdrop-filter: blur(8px);
+}
+.input_text {
+   color: #f0f3f2;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    font-size: 20px;     
+    margin-bottom: 20px;
+    
+   
+}
+.star{
+    color: #00d293;
+    font-size: 35px;
+}
+.review{
+     width: 100%;
+    padding: 14px 20px;
+    border-radius: 10px; /* Bo góc mềm mại hơn */
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: transparent;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+.btn{
+    background-color: #00d293; 
+    color: #000000; 
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 5px;
+    display: block;
+    margin-left: auto;
+    
+}
+.btn:hover {
+    background-color: #00b57e;
+    color: #ffffff;
+}
+    
+.infor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.infor h1{
+    margin-top: 150px;
+    color:rgb(232, 238, 235);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-family:'Segoe UI'; 
+}
+.infor h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    color:rgb(241, 247, 241);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-family:'Segoe UI';
+}
+.locate_in{
+    display: grid;
+    /* Chia làm 2 cột, mỗi cột chiếm  1 fraction bằng nhau */
+    grid-template-columns: 1fr 1fr; 
+    gap: 100px; /* Khoảng cách giữa 2 cột */
+    max-width: 1000px; /* Giới hạn độ rộng tối đa cho đẹp */
+    margin: 40px auto; /* Cách phía trên 40px và tự động căn ra giữa màn hình */
+    padding: 0 20px;
+}
+.left {
+    background-color: #1a1e24; /* Màu nền đen mờ giống phần Đánh giá */
+    padding: 40px;
+    border-radius: 15px;
+    color:rgb(1, 212, 124);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    font-size: 1.2rem;
+    font-family:'Segoe UI';
+}
+.support{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+}
+.social_icons{
+    display: flex;
+    align-items: flex-start; 
+    gap: 15px;
+    font-size: 14px;
+    
+}
+.map{
+    
+    width: 100%;       /* Ép bản đồ trải dài bằng 100% cột trái */
+    height: 250px;     /* BÍ KÍP 2: Khóa chết chiều cao (bạn có thể tăng giảm số này cho vừa mắt) */
+    object-fit: cover; /* Lấp đầy khoảng trống width/height ở trên mà không làm méo ảnh */
+    border-radius: 15px; /* Bo góc cho giống hệt bản thiết kế */
+    margin-top: 20px;    /* Đẩy cách dàn thông tin chữ ở trên ra một chút */
+    margin-bottom: 20px; /* Đẩy cách chữ "Kết nối với chúng tôi" ở dưới ra một chút */
+
+}
+
+.right {
+    background-color: #1a1e24; /* Màu nền đen mờ giống phần Đánh giá */
+    padding: 40px;
+    border-radius: 15px;
+    color:rgb(1, 212, 124);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    font-size: 1.2rem;
+    font-family:'Segoe UI';
+    font-weight: bold;
+}
+
+.btn2{
+    background-color: #00d293; 
+    color: #000000; 
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 5px;
+    display: block;
+    margin-left: auto;
+    
+}
+.input-box  {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.input-box:focus {
+    border-color: #00e6a0;
+    box-shadow: 0 0 5px rgba(0, 230, 160, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+}
+.review:focus {
+    border-color: #00e6a0;
+    box-shadow: 0 0 5px rgba(0, 230, 160, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+}
+.input-box input {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 10px; /* Bo góc mềm mại hơn */
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: transparent;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+.comment {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 10px; /* Bo góc mềm mại hơn */
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: transparent;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+.comment:focus {
+    border-color: #00e6a0;
+    box-shadow: 0 0 5px rgba(0, 230, 160, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+}
+#thanhtacvu{
+    position: sticky;
+    z-index: 31;
+    width: 100%;
+}
