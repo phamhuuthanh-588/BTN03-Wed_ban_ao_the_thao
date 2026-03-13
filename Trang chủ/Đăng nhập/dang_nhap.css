@@ -1,0 +1,165 @@
+
+        /* Thiết lập ảnh nền full màn hình */
+    body {
+    background-image: url('../img/Đăng\ nhập/background-dang-nhap.png');
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed; 
+    margin: 0;
+        }
+/* --- CONTAINER CHÍNH --- */
+#thanhtacvu {
+    display: flex;
+    align-items: center; 
+    justify-content: center;  
+    margin: 30px auto;
+    
+}
+.login-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: auto;
+    height: auto;
+    max-width: 95%;
+    margin: 190px auto 50px auto;
+    position: relative;
+   
+    /* Bỏ background và shadow ở đây vì chúng ta sẽ đổ bóng riêng cho từng khối */
+}
+
+/* --- KHỐI ĐEN (BÊN TRÁI) --- */
+.login-left {
+    background-color: #0d141b; 
+    width: 320px;
+    height: 400px; /* Khối đen CAO HƠN khối xám */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px; /* Bo tròn cả 4 góc */
+    box-shadow: 10px 0 25px rgba(0, 0, 0, 0.3); /* Đổ bóng để nổi lên trên */
+    z-index: 2; /* Ép nằm trên khối xám */
+    position: relative;
+}
+
+/* Chỉnh lại logo cho vừa vặn */
+.login-left .logo-image {
+    width: 180px;
+    height: auto;
+}
+
+/* --- KHỐI XÁM (BÊN PHẢI) --- */
+.login-box {
+    background-color: #829893; /* Màu xám xanh chuẩn mẫu */
+    width: 530px;
+    height: 400px; /* Khối xám LÙN HƠN khối đen */
+    padding: 40px 40px 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 20px 20px 0; /* Chỉ bo góc bên phải */
+    z-index: 1; /* Nằm dưới khối đen */
+    margin-left: -15px; /* Kéo xích vào trong khối đen một chút để tạo độ liền mạch */
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* --- Ô NHẬP LIỆU (INPUT) --- */
+.input-box input {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 10px; /* Bo góc mềm mại hơn */
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: transparent;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-box input::placeholder {
+    color: #e5e5e5;
+}
+
+.input-box input:focus {
+    border-color: #00e6a0;
+    box-shadow: 0 0 5px rgba(0, 230, 160, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* --- NÚT ĐĂNG NHẬP CHÍNH --- */
+.btn {
+    background-color: #00d293; 
+    color: #000000; 
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 5px;
+}
+
+.btn:hover {
+    background-color: #00b57e;
+    color: #ffffff;
+}
+
+/* --- NÚT MẠNG XÃ HỘI --- */
+.social-login {
+    display: flex;
+    gap: 15px;
+}
+
+.social-login button {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-google { background-color: #ffffff; color: #333; }
+.btn-google:hover { background-color: #e99b9b; }
+.btn-google img { width: 18px; height: 18px; }
+.btn-google a {
+    color: #ea5935; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+
+.btn-facebook { background-color: #f7f7f7; color: #1310e6; }
+.btn-facebook:hover { background-color: #256bc8; }
+.btn-facebook img { width: 18px; height: 18px; }
+.btn-facebook a {
+    color: #5100e6; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+/* --- LINKS BÊN DƯỚI --- */
+.login-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-links a { text-decoration: none; transition: 0.2s; font-weight: 500;}
+.login-links a:first-child { color: #f0f0f0; }
+.login-links a:first-child:hover { color: #ffffff; }
+.login-links a:last-child { color: #00e6a0; }
+.login-links a:last-child:hover { color: #ffffff; }

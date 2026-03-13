@@ -1,36 +1,30 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gr3</title>
-    <link rel="icon" href="/Trang chủ/Img/Trang chủ/favicon1.png" type="image/png">
-    <link rel="stylesheet" href="/Trang chủ/fontawesome-free-7.1.0-web/css/all.min.css">
-    <link rel="stylesheet" href="/Trang chủ/Trang_chủ.css">
-    
+    <title>Đăng nhập - Gr3</title>
+    <link rel="icon" href="../Img/Trang chủ/favicon1.png" type="image/png">
+    <link rel="stylesheet" href="../fontawesome-free-7.1.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../Trang_chủ.css"> 
+    <link rel="stylesheet" href="dang_nhap.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300&display=swap" rel="stylesheet">
+
+    
 </head>
 <body>
-    <header id="header"> 
+    <header id="thanhtacvu"> 
         <nav class="thanh_header">
-            <div class="ham_menu">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-
-
             <div id="logo_header-search">
                 <div class="logo_header">
-                    <a href="/Trang chủ/Trang_chủ.html">
-                        <img src="/Trang chủ/Img/Header/logoheader.png" alt="logo_header">
+                    <a href="../../index.html">
+                        <img id="img1" src="../Img/Header/logoheader.png" alt="logo_header">
                     </a>
                 </div>
-        
                 <div class="search">
                     <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
                     <input id="input_search" type="search" placeholder="Tìm kiếm sản phẩm">
@@ -38,30 +32,64 @@
             </div>     
 
             <div id="nav">
-                <div id=" gioi-thieu"><a href="/Trang chủ/Giới thiệu/">Giới thiệu</a></div>
-                <div id="dich_vu"><a href="/Trang chủ/Dịch vụ/">Dịch vụ</a></div>
-                <div id=" san_pham"><a href="/Trang chủ/Sản phẩm/">Sản phẩm</a></div>
-                <div id="lien_he"><a href="/Trang chủ/Liên hệ/">Liên hệ</a></div> 
+                <div id="nav-button_dang_nhap">
+                    <a href="#">
+                        <i class="fa-regular fa-user" style="color: #000000; font-size: 18px;"></i>
+                        <span>Đăng nhập</span>
+                    </a>
+                </div>
+                <div id="gioi-thieu"><a href="../Giới thiệu/">Giới thiệu</a></div>
+                <div id="dich_vu"><a href="../Dịch vụ/">Dịch vụ</a></div>
+                <div id="san_pham"><a href="../Sản phẩm/">Sản phẩm</a></div>
+                <div id="lien_he"><a href="../Liên hệ/">Liên hệ</a></div> 
             </div>
 
             <div id="dang_nhap-cart">
                 <div id="cart">
-                    <a href="">
+                    <a href="#">
                         <i class="fa-solid fa-cart-shopping" style="color: #000000; font-size: 18px;"></i>
                         <span> Giỏ hàng</span>
-                    </a>
-                </div>
-
-                <div id="button_dang_nhap">
-                    <a href="/Trang chủ/Đăng nhập/Đăng_nhập.html">
-                        <i class="fa-regular fa-user" style="color: #000000; font-size: 18px;"></i>
-                        <span>Đăng nhập</span>
                     </a>
                 </div>
             </div> 
         </nav>
     </header>
-    
+    <main class="login-container">
+    <div class="login-left">
+        <img src="../Img/Trang chủ/Logo.png" alt="Logo GR3" class="logo-image">
+    </div>
 
+    <div class="login-box">
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Tên người dùng" required>
+            </div>
+            
+            <div class="input-box">
+                <input type="password" placeholder="Mật khẩu" required>
+            </div>
+            
+            <button type="submit" class="btn">Đăng nhập</button>
+
+            <div class="social-login">
+                <button type="button" class="btn-google">
+                    <i class="fa-brands fa-google" style="font-size: 18px; color: #ea5935;"></i> 
+                            <a href="https://accounts.google.com/Login?btmpl=mobile_tier2&hl=vi&service=mail">Đăng nhập bằng Google</a> 
+                        </button>
+                </button>
+                <button type="button" class="btn-facebook">
+                    <i class="fa-brands fa-facebook-f" style="font-size: 13px;" ></i>
+                        <a href="https://www.facebook.com/?locale=vi_VN">Đăng nhập bằng Facebook</a>
+                </button>
+            </div>
+            <div class="login-links">
+                <a href="quenmatkhau.html">Quên mật khẩu</a>
+                <a href="dangky.html">Tạo tài khoản mới &rarr;</a>
+            </div>
+        </form>
+    </div>
+</main>
+
+    <script src="../Trang_chủ.js"></script>
 </body>
 </html>
