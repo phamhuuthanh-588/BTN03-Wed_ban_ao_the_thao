@@ -142,13 +142,13 @@
     display: grid;
     /* Chia làm 2 cột, mỗi cột chiếm  1 fraction bằng nhau */
     grid-template-columns: 1fr 1fr; 
-    gap: 100px; /* Khoảng cách giữa 2 cột */
-    max-width: 1000px; /* Giới hạn độ rộng tối đa cho đẹp */
+    gap: 100px; 
+    max-width: 1000px; /* Giới hạn độ rộng tối đa*/
     margin: 40px auto; /* Cách phía trên 40px và tự động căn ra giữa màn hình */
     padding: 0 20px;
 }
 .left {
-    background-color: #1a1e24; /* Màu nền đen mờ giống phần Đánh giá */
+    background-color: #1a1e24; 
     padding: 40px;
     border-radius: 15px;
     color:rgb(1, 212, 124);
@@ -178,16 +178,16 @@
 .map{
     
     width: 100%;       /* Ép bản đồ trải dài bằng 100% cột trái */
-    height: 250px;     /* BÍ KÍP 2: Khóa chết chiều cao (bạn có thể tăng giảm số này cho vừa mắt) */
+    height: 250px;     /*  Khóa chết chiều cao ) */
     object-fit: cover; /* Lấp đầy khoảng trống width/height ở trên mà không làm méo ảnh */
-    border-radius: 15px; /* Bo góc cho giống hệt bản thiết kế */
-    margin-top: 20px;    /* Đẩy cách dàn thông tin chữ ở trên ra một chút */
-    margin-bottom: 20px; /* Đẩy cách chữ "Kết nối với chúng tôi" ở dưới ra một chút */
+    border-radius: 15px; 
+    margin-top: 20px;   
+    margin-bottom: 20px; 
 
 }
 
 .right {
-    background-color: #1a1e24; /* Màu nền đen mờ giống phần Đánh giá */
+    background-color: #1a1e24;
     padding: 40px;
     border-radius: 15px;
     color:rgb(1, 212, 124);
@@ -230,7 +230,7 @@
 .input-box input {
     width: 100%;
     padding: 14px 20px;
-    border-radius: 10px; /* Bo góc mềm mại hơn */
+    border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.8);
     background: transparent;
     color: white;
@@ -241,7 +241,7 @@
 .comment {
     width: 100%;
     padding: 14px 20px;
-    border-radius: 10px; /* Bo góc mềm mại hơn */
+    border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.8);
     background: transparent;
     color: white;
@@ -259,3 +259,4 @@
     z-index: 31;
     width: 100%;
 }
+
