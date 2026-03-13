@@ -25,14 +25,14 @@
     margin: 190px auto 50px auto;
     position: relative;
    
-    /* Bỏ background và shadow ở đây vì chúng ta sẽ đổ bóng riêng cho từng khối */
+ 
 }
 
 /* --- KHỐI ĐEN (BÊN TRÁI) --- */
 .login-left {
     background-color: #0d141b; 
     width: 320px;
-    height: 400px; /* Khối đen CAO HƠN khối xám */
+    height: 400px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,7 +52,7 @@
 .login-box {
     background-color: #829893; /* Màu xám xanh chuẩn mẫu */
     width: 530px;
-    height: 400px; /* Khối xám LÙN HƠN khối đen */
+    height: 400px; 
     padding: 40px 40px 40px 50px;
     display: flex;
     flex-direction: column;
@@ -162,4 +162,5 @@
 .login-links a:first-child { color: #f0f0f0; }
 .login-links a:first-child:hover { color: #ffffff; }
 .login-links a:last-child { color: #00e6a0; }
+
 .login-links a:last-child:hover { color: #ffffff; }
