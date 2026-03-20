@@ -1,0 +1,262 @@
+/*  THIẾT LẬP CHUNG  */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: radial-gradient(circle at center, #113f39 0%, #080e10 100%);
+    background-color: #080e10;
+    color: #ffffff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/*HEADER  */
+header#header {
+    width: 100%;
+    background-color: #0d1619;
+    border-bottom: 1px solid rgba(38, 227, 149, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+/* Tăng độ ưu tiên bằng cách dùng tổ hợp tag + class */
+header#header .thanh_header {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr 1.2fr;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+#logo_header-search {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo_header img {
+    height: 40px;
+    width: auto;
+}
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 220px;
+}
+
+.search #input_search {
+    width: 100%;
+    background: #1a2427;
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 8px 10px 8px 35px;
+    color: #fff;
+    font-size: 13px;
+}
+
+.search i {
+    position: absolute;
+    left: 12px;
+    color: #26e395;
+}
+
+/* Menu Nav */
+#nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+#nav div a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+#nav div a:hover, #nav .active-page a {
+    color: #26e395;
+    font-weight: bold;
+}
+
+/* Giỏ hàng & Đăng nhập */
+#dang_nhap-cart {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+#dang_nhap-cart a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.input-group{
+    font-weight: bold;
+}
+#dang_nhap-cart i { color: #26e395; }
+
+/* NỘI DUNG CHÍNH  */
+.container {
+    max-width: 1100px;
+    margin: 100px auto 50px auto;
+    padding: 0 20px;
+}
+
+.glow-text {
+    color: #26e395;
+    text-align: center;
+    font-size: 2.5rem;
+    text-shadow: 0 0 15px rgba(38, 227, 149, 0.5);
+    margin-bottom: 10px;
+}
+
+.subtitle { text-align: center; color: #888; margin-bottom: 40px; }
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.glass-border {
+    background: rgba(38, 227, 149, 0.08);
+    border: 1px solid rgba(38, 227, 149, 0.2);
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+.glass-card {
+    background: #161f22;
+    border-radius: 15px;
+    padding: 25px;
+    height: 100%;
+}
+
+.stars {
+    display: inline-flex;
+    gap: 5px;
+    margin-left: 15px;
+}
+
+.stars i {
+    color: #26e395;
+    font-size: 16px;
+    text-shadow: 0 0 8px rgba(38, 227, 149, 0.6);
+}
+
+input, textarea {
+    width: 100%;
+    background: #232c2f;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 12px;
+    color: #fff;
+    margin-top: 10px;
+    outline: none;
+}
+
+input:focus, textarea:focus { border-color: #26e395; }
+
+.btn-neon {
+    background: #26e395;
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn-neon:hover { box-shadow: 0 0 15px #26e395; }
+
+.textarea-container { position: relative; }
+.btn-small {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: auto;
+    padding: 8px 15px;
+}
+
+.contact-info {
+    list-style: none;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.contact-info li i {
+    color: #26e395;
+    width: 25px;
+    text-align: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.map-preview img { width: 100%; border-radius: 10px; margin-top: 15px; }
+.social-icons { display: flex; gap: 15px; margin-top: 20px; }
+.social-icons img { width: 32px; height: 32px; }
+
+/* RESPONSIVE  */
+@media screen and (max-width: 992px) {
+    header#header .thanh_header {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    #logo_header-search, #nav, #dang_nhap-cart {
+        justify-content: center;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header#header .thanh_header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search { width: 100%; }
+
+    #nav {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+    }
+
+    .container {
+        margin-top: 250px; /* Tăng khoảng cách để header mobile không đè nội dung */
+    }
+
+    #dang_nhap-cart span {
+        display: none;
+    }
+}
