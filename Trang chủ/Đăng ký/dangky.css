@@ -79,6 +79,12 @@
     outline: none;
     transition: 0.3s;
 }
+.error-text {
+    color: #ff4d4d;     
+    margin-top: 5px;
+    display: none;      
+    font-style: italic;
+}
 
 .input-box input::placeholder {
     color: #e5e5e5;

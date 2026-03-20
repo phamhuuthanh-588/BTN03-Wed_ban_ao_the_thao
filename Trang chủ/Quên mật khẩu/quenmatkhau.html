@@ -63,10 +63,14 @@
             <p> Vui lòng nhập email của bạn ở đây để nhận hướng dẫn đặt lại mật khẩu.</p>    
         <form action="#">
             <div class="input-box">
-                <input type="text" minlength="10" maxlength="10" placeholder="Vui lòng nhập Email ở đây" required>
+                <input type="email" id="email-quen-mk" placeholder="Nhập email của bạn" required>
+    
+                    <small id="loi-email" class="error-text">Vui lòng nhập đúng định dạng Email!</small>
             </div>
+
+            <button type="button" id="btn-gui-mk" class="btn" disabled style="opacity: 0.5;">Gửi yêu cầu</button>
             
-            <button type="submit" class="btn">Xác thực Email</button>
+            
 
             
       
@@ -78,5 +82,6 @@
 </main>
 
     <script src="../Trang_chủ.js"></script>
+     <script src="quenmatkhau.js"></script>
 </body>
 </html>

@@ -32,7 +32,7 @@
 .login-left {
     background-color: #0d141b; 
     width: 320px;
-    height: 400px; /* Khối đen CAO HƠN khối xám */
+    height: 400px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,14 +59,14 @@
 .login-box {
     background-color: #829893; /* Màu xám xanh chuẩn mẫu */
     width: 530px;
-    height: 400px; /* Khối xám LÙN HƠN khối đen */
+    height: 400px; 
     padding: 40px 40px 40px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 0 20px 20px 0; /* Chỉ bo góc bên phải */
-    z-index: 1; /* Nằm dưới khối đen */
-    margin-left: -15px; /* Kéo xích vào trong khối đen một chút để tạo độ liền mạch */
+    border-radius: 0 20px 20px 0; 
+    z-index: 1; 
+    margin-left: -15px; 
 }
 
 .login-box form {
@@ -87,7 +87,13 @@
     outline: none;
     transition: 0.3s;
 }
-
+.error-text {
+    color: #ff4d4d;
+    font-size: 13px;
+    margin-top: 5px;
+    display: none; 
+    font-style: italic;
+}
 .input-box input::placeholder {
     color: #e5e5e5;
 }

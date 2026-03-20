@@ -9,7 +9,7 @@
     <link rel="icon" href="../Img/Trang chủ/favicon1.png" type="image/png">
     <link rel="stylesheet" href="../fontawesome-free-7.1.0-web/css/all.min.css">
     <link rel="stylesheet" href="../Trang_chủ.css"> 
-    <link rel="stylesheet" href="dang_ky.css">
+    <link rel="stylesheet" href="dangky.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300&display=swap" rel="stylesheet">
@@ -33,7 +33,7 @@
 
             <div id="nav">
                 <div id="nav-button_dang_nhap">
-                    <a href="#">
+                    <a href="../Đăng nhập/dangnhap.html">
                         <i class="fa-regular fa-user" style="color: #000000; font-size: 18px;"></i>
                         <span>Đăng nhập</span>
                     </a>
@@ -67,14 +67,15 @@
             <div class="input-box">
                 <input type="text" minlength="10" maxlength="40" placeholder="Tên người dùng" required>
             </div>
-            <div class="input-box">
-                <input type="password" minlength="10" maxlength="40" placeholder="Mật khẩu" required>
-            
+           <div class="input-box">
+                <input type="password" id="mat-khau" placeholder="Nhập mật khẩu" required>
             </div>
-             <div class="input-box">
-                <input type="password" minlength="10" maxlength="40" placeholder="Nhập lại mật khẩu" required>
-            
-            <button type="submit" class="btn">Đăng ký</button>
+
+            <div class="input-box">
+                <input type="password" id="nhap-lai-mat-khau" placeholder="Xác nhận mật khẩu" required>
+                <small id="loi-mat-khau" class="error-text">Mật khẩu không khớp!</small>
+            </div>
+           <button type="submit" id="btn-dang-ky" class="btn">Đăng ký</button>
 
             <div class="social-login">
                 <button type="button" class="btn-google">
@@ -91,11 +92,11 @@
       
             
                 
-            </div>
+            
         </form>
     </div>
 </main>
-
+    <script src="dangky.js"></script>
     <script src="../Trang_chủ.js"></script>
 </body>
 </html>
