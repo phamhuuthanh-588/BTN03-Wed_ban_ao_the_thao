@@ -164,13 +164,6 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.user-avatar img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #41DC9C;
-}
 
 .user-name {
     color: #41DC9C;
@@ -185,4 +178,42 @@ body {
 .comment {
     margin-top: 10px;
     line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+    
+    
+    .container {
+       
+        padding: 80px 15px 20px 15px; 
+    }
+
+
+    .introduction {
+        
+        padding: 10px 15px; 
+        text-align: justify;
+    }
+
+   
+    .text {
+        font-size: 28px; 
+        margin-top: 20px; 
+    }
+
+   
+    .infor {
+        
+        grid-template-columns: 1fr;     
+        gap: 20px;
+    }
+    .icon-feature {
+        font-size: 28px;
+    }
+    .filter-tabs{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;      
+        justify-content: flex-start;
+    }
 }

@@ -160,3 +160,27 @@
     font-weight: bold; 
 }
 
+@media screen and (max-width: 768px) {
+    
+    .login-container {
+        
+        
+        width: 90%; 
+        margin: 60px auto; 
+        justify-content: center; 
+        align-items: center;    
+    }
+    .login-left {
+        
+        display: none; 
+        
+       
+    }
+    .login-box {
+        width: 100%; 
+        box-sizing: border-box; 
+        margin: 0; 
+        padding: 30px 20px; 
+        border-radius: 10px;
+    }
+}
