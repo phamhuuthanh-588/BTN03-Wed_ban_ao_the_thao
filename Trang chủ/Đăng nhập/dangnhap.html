@@ -61,27 +61,29 @@
     </div>
 
     <div class="login-box">
-        <form action="#">
+        <form id="theone" action="#">
             <div class="input-box">
-                <input type="text" placeholder="Tên người dùng" required>
+                <input id="loginname" type="text" placeholder="Tên người dùng" required>
+                <small class="message"></small> 
             </div>
             
             <div class="input-box">
                 <input type="password" id="password-input" placeholder="Mật khẩu" required>
                 <i class="fa-solid fa-eye" id="toggle-password"></i>
+                <small class="message"></small> 
             </div>
             
-            <button type="submit" class="btn">Đăng nhập</button>
+            <button type="submit" id="btn-dang-nhap" class="btn">Đăng nhập</button>
 
             <div class="social-login">
-                <button type="button" class="btn-google">
+                <button type="button" class="btn-google" onclick="window.location.href='https://accounts.google.com/Login?btmpl=mobile_tier2&hl=vi&service=mail'"> Đăng nhập bằng Google
                     <i class="fa-brands fa-google" style="font-size: 18px; color: #ea5935;"></i> 
-                            <a href="https://accounts.google.com/Login?btmpl=mobile_tier2&hl=vi&service=mail">Đăng nhập bằng Google</a> 
+                           
                         
                 </button>
-                <button type="button" class="btn-facebook">
+                <button type="button" class="btn-facebook"onclick="window.location.href='https://www.facebook.com/?locale=vi_VN'"> Đăng nhập bằng Facebook
                     <i class="fa-brands fa-facebook-f" style="font-size: 13px;" ></i>
-                        <a href="https://www.facebook.com/?locale=vi_VN">Đăng nhập bằng Facebook</a>
+                       
                 </button>
             </div>
             <div class="login-links">

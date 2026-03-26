@@ -1,4 +1,4 @@
-
+//1. Gọi các phần từ
 const emailEl = document.getElementById('email-quen-mk');
 const loiEmailEl = document.getElementById('loi-email');
 const btnGui = document.getElementById('btn-gui-mk');
@@ -15,15 +15,13 @@ emailEl.addEventListener('input', function() {
         if (emailRegex.test(emailGiaTri)) {
             
             loiEmailEl.style.display = 'none';
-            emailEl.style.border = '2px solid #00d293';
-            
+            emailEl.style.border = '2px solid #00d293';            
             btnGui.disabled = false;
             btnGui.style.opacity = '1';
         } else {
             
             loiEmailEl.style.display = 'block';
             emailEl.style.border = '2px solid #ff4d4d';
-            
             btnGui.disabled = true;
             btnGui.style.opacity = '0.5';
         }

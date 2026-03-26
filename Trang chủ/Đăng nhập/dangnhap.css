@@ -98,6 +98,24 @@
 #toggle-password:hover {
     color: #00d293; 
 }
+.input-box .message { 
+    visibility: hidden; /* Giấu đi khi chưa có lỗi */
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+    font-style: italic;
+    display: block;
+}
+.input-box.error input {
+    border: 2px solid red; /* Đổi viền ô nhập thành đỏ */
+}
+.input-box.error .message {
+    visibility: visible; /* Hiện dòng chữ thông báo lỗi lên */
+}
+
+.input-box.success input {
+    border: 2px solid green; 
+}
 
 .input-box input::placeholder {
     color: #e5e5e5;
