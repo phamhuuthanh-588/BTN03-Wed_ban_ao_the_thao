@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="../Trang_chủ.css">
+    <link rel="stylesheet" href="../fontawesome-free-7.1.0-web/css/all.min.css">
+    <style>
+        *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: "Inter", sans-serif;
+        }
+
+        main{
+        background:#f5f5f5;
+        padding: 80px;
+        }
+
+        /* khung chính */
+        .product-detail{
+        display:flex;
+        gap:50px;
+        max-width:1100px;
+        margin:auto;
+        background:white;
+        padding:40px;
+        border-radius:10px;
+        }
+
+        .product-top{
+        display: flex;
+        gap: 50px;
+        }
+
+        /* ảnh sản phẩm */
+        .detail-left{
+        flex:1;
+        }
+
+        .detail-left img{
+        width: 100%;
+        max-width: 450px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        }
+
+        /* phần thông tin */
+        .detail-right{
+        flex:1;
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+        }
+
+        .detail-right h1{
+        font-size:28px;
+        font-weight:600;
+        }
+
+        @media (max-width:768px){
+            .product-top{
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width:768px){
+            .product-top{
+            flex-direction:column;
+            }
+
+            .detail-left img{
+            max-width:100%;
+            }
+        }
+
+        /* giá */
+        .price{
+        font-size:24px;
+        color:#e53935;
+        font-weight:600;
+        }
+
+        /* size */
+        .sizes{
+        display:flex;
+        gap:10px;
+        }
+
+        .sizes span{
+        border:1px solid #ccc;
+        padding:8px 16px;
+        cursor:pointer;
+        transition:0.2s;
+        }
+
+        .sizes span:hover{
+        border-color:black;
+        }
+
+        /* số lượng */
+        .quantity{
+        margin-top:10px;
+        }
+
+        .qty-box{
+        display:flex;
+        align-items:center;
+        gap:10px;
+        margin-top:5px;
+        }
+
+        .qty-box button{
+        width:30px;
+        height:30px;
+        cursor:pointer;
+        }
+
+        /* nút giỏ hàng */
+        .add-cart{
+        margin-top:20px;
+        padding:12px;
+        background:black;
+        color:white;
+        border:none;
+        cursor:pointer;
+        font-size:16px;
+        }
+
+        .add-cart:hover{
+        background:#333;
+        }
+
+        .product-desc{
+            margin-top: 50px;
+            border-top: 1px solid #ddd;
+            padding-top: 30px;
+        }
+
+        .product-desc h2{
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+
+        .product-desc p{
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+        .size-chart{
+            width: 100%;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header"> 
+        <nav class="thanh_header">
+            <div id="logo_header-search">
+                <div class="ham_menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="logo_header">
+                    <a href="../Giới thiệu/gioithieu.html">
+                        <img id="img1"src="../Img/Header/logoheader.png" alt="logo_header">
+                        <img id="img2"src="../Img/Trang chủ/Logo01.png" alt="">
+                    </a>
+                </div>
+        
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                    <input id="input_search" type="search" placeholder="Tìm kiếm sản phẩm">
+                </div>
+            </div>     
+
+            <div id="nav">
+                <div id="nav-button_dang_nhap">
+                    <a href="../Đăng nhập/dangnhap.html">
+                        <i class="fa-regular fa-user" style="color: #000000; font-size: 18px;"></i>
+                        <span>Đăng nhập</span>
+                    </a>
+                </div>
+                <div id=" gioi-thieu"><a href="../Giới thiệu/gioithieu.html">Giới thiệu</a></div>
+                <div id="dich_vu"><a href="../Dịch vụ/dichvu.html">Dịch vụ</a></div>
+                <div id=" san_pham"><a href="../Sản phẩm/Sản_phẩm.html">Sản phẩm</a></div>
+                <div id="lien_he"><a href="../Liên hệ/lienhe.html">Liên hệ</a></div> 
+            </div>
+
+            <div id="dang_nhap-cart">
+                <div class="search_mini">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div id="cart">
+                    <a href=".">
+                        <i class="fa-solid fa-cart-shopping" style="color: #000000; font-size: 18px;"></i>
+                        <span> Giỏ hàng</span>
+                    </a>
+                </div>
+
+                <div id="button_dang_nhap">
+                    <a href="../Đăng nhập/dangnhap.html">
+                        <i class="fa-regular fa-user" style="color: #000000; font-size: 18px;"></i>
+                        <span>Đăng nhập</span>
+                    </a>
+                </div>
+            </div> 
+        </nav>
+    </header>
+    <main>
+        <div class="product-detail">
+            <div class="product-top">
+                <div class="detail-left">
+                    <img id="image">
+                </div>
+
+                <div class="detail-right">
+
+                    <h1 id="name"></h1>
+
+                    <div class="price">
+                        <span class="new" id="price"></span>
+                    </div>
+
+                    <p class="brand">Hãng: <span id="brand"></span></p>
+
+                    <div class="sizes">
+                        <span>S</span>
+                        <span>M</span>
+                        <span>L</span>
+                        <span>XL</span>
+                    </div>
+
+                    <div class="quantity">
+                        <span>Số lượng</span>
+
+                        <div class="qty-box">
+                            <button>-</button>
+                            <span id="qty">1</span>
+                            <button>+</button>
+                        </div>
+                    </div>
+
+                    <button class="add-cart">Thêm vào giỏ hàng</button>
+                    
+                    <div class="product-desc">
+                        <h2>Thông tin chi tiết</h2>
+                        <p id="desc"></p>
+                        <img class="size-chart" src="../Img_SP/size_product.jpg" alt="">
+                    </div>
+
+                    <div class="support">
+                        <span>Tư vấn</span>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-facebook-messenger"></i>
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        
+
+    </main>
+
+<script>
+const product = JSON.parse(localStorage.getItem("product"));
+
+if(product){
+    document.getElementById("name").innerText = product.name;
+    document.getElementById("price").innerText = product.price;
+    document.getElementById("image").src = product.img;
+    document.getElementById("desc").innerText = product.desc;
+    document.getElementById("brand").innerText = product.brand;
+}
+</script>
+
+</body>
+</html>
