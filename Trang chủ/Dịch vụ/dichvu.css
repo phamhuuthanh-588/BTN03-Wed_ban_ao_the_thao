@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Nền ảnh màu xanh của bạn */
+    background-image: url('bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #0b0e14; 
+}
+
+/* Khung nội dung có độ trong suốt để nhìn thấy nền xanh phía sau */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Trắng 90% để hơi trong suốt */
+    backdrop-filter: blur(10px); /* Làm mờ nền phía sau (hiệu ứng kính) */
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.header {
+    background-color: #002b36;
+    color: #00ffd4;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+form {
+    padding: 20px 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.color-options {
+    display: flex;
+    gap: 10px;
+}
+
+.color-item {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    transition: 0.2s;
+}
+
+.color-item.active {
+    border-color: #002b36;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 255, 212, 0.5);
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+.upload-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    border: 2px dashed #00ffd4;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.upload-box:hover {
+    background-color: #f0fdfa;
+}
+
+/* CSS cho vùng hiển thị ảnh và nút X */
+#preview-container {
+    display: none; 
+    position: relative; 
+    width: fit-content; /* Bắt khung phải ôm khít ảnh để nút X nằm đúng góc */
+    margin: 20px auto;
+}
+
+#preview-img {
+    max-width: 250px;
+    display: block; 
+    border-radius: 8px;
+    border: 2px solid #00ffd4;
+}
+
+#remove-btn {
+    position: absolute; 
+    top: -12px; 
+    right: -12px; 
+    background: #ff4d4d; 
+    color: white; 
+    width: 26px; 
+    height: 26px; 
+    border-radius: 50%; 
+    text-align: center; 
+    line-height: 24px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    font-size: 18px;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 10;
+    transition: 0.2s;
+}
+
+#remove-btn:hover {
+    background: #ff1a1a;
+    transform: scale(1.1);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: #002b36;
+    color: #00ffd4;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 10px;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #004d5c;
+    color: white;
+}
