@@ -1,5 +1,5 @@
 main{
-    padding-top: 80px;
+    padding-top: 80px; /*nội dung nằm dưới header*/
     min-height: 100vh;
 }
 
@@ -8,12 +8,11 @@ html,body{
 }
 
 #header {
-    position: fixed;
+    position: fixed; /*header lun nằm trên cùng*/
     z-index: 1000 !important;
 }
 
 /* ===== BANNER ===== */
-
 .logo_main{
     background: url("../Img/Sản phẩm/SẢN PHẨM.png") no-repeat center;
     background-size: cover;
@@ -26,6 +25,7 @@ html,body{
     align-self: stretch;
 }
 
+/* ===== Tiêu đề =====*/
 .dssp{
     text-align: center;
     margin-bottom: 40px;
@@ -43,8 +43,7 @@ html,body{
     color: white;
 }
 
-/* ===== SEARCH LỚN ===== */
-
+/* ===== tìm kiếm ===== */
 .search_sp{
     width: 100%;
     max-width: 1000px;
@@ -77,15 +76,14 @@ html,body{
     color: #ffffff;
 }
 
-/* ===== FILTER BUTTON ===== */
-
+/* ===== Bộ lọc ===== */
 .filter{
     max-width: 500px;
     margin: 40px 0;
     display:flex;
     justify-content:center;
     gap:20px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*xuống dòng nếu không đủ chỗ*/
 }
 
 .filter button{
@@ -100,55 +98,49 @@ html,body{
 }
 
 .filter button:hover{
-    background: #41DC9C;
+    background: #41DC9C; /*đổi màu khi hover*/ 
     color: black;
 }
 
-.filter-btn.active {
-    color: white;
-}
-
-/* ===== GRID SẢN PHẨM ===== */
-
+/* ===== Grid sản phẩm ===== */
 .products-wrapper{
     display:grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4,1fr); /*4 cột*/
     gap:30px;
     margin:60px auto;
     width:90%;
     max-width:1400px;
 }
 
-/* tablet */
 @media (max-width: 1024px){
 .products-wrapper{
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr); /*tablet: 2 cột*/
 }
 }
 
-/* phone */
 @media (max-width: 768px){
 .products-wrapper{
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /*điện thoại: 1 cột*/
 }
 }
 
+/* ===== Thẻ sản phẩm =====*/
 .product-card{
     position: relative;
     overflow: hidden;
 
-    background: rgba(12, 19, 29, 0.6);
+    background: rgba(12, 19, 29, 0.6); /*nền mờ*/
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
-    border-radius: 16px;
+    border-radius: 16px; /*bo góc*/
     border: 1px solid rgba(255,255,255,0.1);
 
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /*hiệu ứng khi hover*/
 }
 
 .product-card:hover{
-    transform: scale(1.12);
+    transform: scale(1.12); /*phóng to khi hover*/
     z-index: 10;
 }
 
@@ -162,7 +154,7 @@ html,body{
 .product-image img{
     width:100%;
     height:100%;
-    object-fit:cover;
+    object-fit:cover; /*ảnh không méo*/
 }
 
 .discount-badge {
@@ -175,12 +167,12 @@ html,body{
 
     padding: 6px 14px;
 
-    border-radius: 50px;   /* tạo elip */
+    border-radius: 50px;  
 
     font-size: 15px;
     font-weight: bold;
 
-    z-index: 2;
+    z-index: 2; /*nằm trên ảnh*/
 }
 
 .product-info{
@@ -206,14 +198,13 @@ html,body{
     font-weight: bold;
 }
 
-/* ===== PAGINATION ===== */
-
+/* ===== phân trang ===== */
 .pagination{
     width: 530px;
     height: 50px;
     margin: 40px auto 80px auto;
     display: flex;
-    justify-content: center;
+    justify-content: center; /*căn giữa*/
     gap: 10px;
 }
 
@@ -234,13 +225,12 @@ html,body{
 }
 
 /* ======= Hover ===== */
-
 .hover-detail {
     position: absolute;
     top: -20px;
     left: 0;
 
-    transform: translate(-30%,20px);  /* gộp lại */
+    transform: translate(-30%,20px);
 
     width: 550px;
 
@@ -264,7 +254,7 @@ html,body{
     left: auto;
     right: 0;
     transform: translateX(30%);
-}
+} /*thẻ cuối mỗi hàng sẽ hiển thị sang trái*/
 
 @media (max-width:1024px){
 .hover-detail{

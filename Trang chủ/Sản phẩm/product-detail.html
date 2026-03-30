@@ -200,7 +200,7 @@
                 </div>
 
                 <div id="cart">
-                    <a href=".">
+                    <a href="../Giỏ hàng/giohang.html">
                         <i class="fa-solid fa-cart-shopping" style="color: #000000; font-size: 18px;"></i>
                         <span> Giỏ hàng</span>
                     </a>
@@ -282,6 +282,29 @@ if(product){
     document.getElementById("desc").innerText = product.desc;
     document.getElementById("brand").innerText = product.brand;
 }
+
+const addCartBtn = document.querySelector(".add-cart");
+addCartBtn.addEventListener("click", function () {
+    // Lấy thông tin từ các ID đã đổ dữ liệu
+    const name = document.getElementById("name").innerText;
+    const price = parseInt(document.getElementById("price").innerText.replace(/\D/g, ''));
+    const img = document.getElementById("image").src;
+    const size = document.querySelector(".sizes span.active")?.innerText || "S";
+    const quantity = parseInt(document.getElementById("qty").innerText);
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Logic kiểm tra trùng tên + trùng size
+    const existing = cart.find(item => item.name === name && item.size === size);
+    if (existing) {
+        existing.quantity += quantity;
+    } else {
+        cart.push({ name, price, img, size, quantity });
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert("Thêm giỏ hàng thành công!");
+});
 </script>
 
 </body>

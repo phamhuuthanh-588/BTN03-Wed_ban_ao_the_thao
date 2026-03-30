@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // ===============================
-    // LẤY PHẦN TỬ
-    // ===============================
+    //lấy phần tử
     const products = document.querySelectorAll(".product-card");
     const buttons = document.querySelectorAll(".filter-btn");
     const pagination = document.getElementById("pagination");
@@ -10,62 +8,54 @@ document.addEventListener("DOMContentLoaded", function () {
     const headerSearch = document.getElementById("input_search");
     const mainSearch = document.querySelector(".search_sp input");
 
-    // ===============================
-    // BIẾN TRẠNG THÁI
-    // ===============================
-    const productsPerPage = 16;
+    //biến trạng thái
+    const productsPerPage = 16; //số sản phẩm hiện thị trong 1 trang
     let currentBrand = "all";
     let currentCategory = "all";
     let currentPage = 1;
     let currentKeyword = "";
 
-    // ===============================
-    // LỌC SẢN PHẨM
-    // ===============================
+    //lọc sản phẩm
     function getFilteredProducts() {
         return Array.from(products).filter(product => {
 
             const name = product.querySelector(".product-name")
-                ?.innerText.toLowerCase() || "";
+                ?.innerText.toLowerCase() || ""; //lấy tên
 
             const brandMatch =
             currentBrand === "all" ||
-            product.dataset.brand.toLowerCase() === currentBrand;
+            product.dataset.brand.toLowerCase() === currentBrand; //kiểm tra brand
 
             const categoryMatch =
             currentCategory === "all" ||
-            product.dataset.category.toLowerCase() === currentCategory;
+            product.dataset.category.toLowerCase() === currentCategory; //kiểm tra category
 
             const searchMatch =
-                name.includes(currentKeyword.toLowerCase());
+                name.includes(currentKeyword.toLowerCase()); //kiểm tra tên
 
             return brandMatch && categoryMatch && searchMatch;
         });
     }
 
-    // ===============================
-    // HIỂN THỊ
-    // ===============================
+    //hiển thị sản phẩm đã lọc
     function showProducts() {
 
         const filtered = getFilteredProducts();
-        const start = (currentPage - 1) * productsPerPage;
-        const end = start + productsPerPage;
+        const start = (currentPage - 1) * productsPerPage; //vị trí bắt đầu
+        const end = start + productsPerPage; //vị trí kết thúc
 
         products.forEach(product => {
-        product.style.display = "none";
+        product.style.display = "none"; //ẩn hết
         });
 
         filtered.slice(start, end).forEach(product => {
-        product.style.display = "";
+        product.style.display = ""; //hiển thị những sản phẩm đã lọc
         });
 
-        updatePagination(filtered.length);
+        updatePagination(filtered.length); //cập nhật phân trang
     }
 
-    // ===============================
-    // PHÂN TRANG
-    // ===============================
+    //phân trang
     function updatePagination(totalProducts) {
 
         if (!pagination) return;
@@ -94,9 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // ===============================
     // FILTER
-    // ===============================
     buttons.forEach(button => {
         button.addEventListener("click", function () {
 
@@ -123,9 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // ===============================
-    // SEARCH
-    // ===============================
+    //tìm kiếm
     function handleSearch(value) {
         currentKeyword = value;
         currentPage = 1;
@@ -136,28 +122,28 @@ document.addEventListener("DOMContentLoaded", function () {
         headerSearch.addEventListener("input", function () {
             handleSearch(this.value);
         });
-    }
+    } //tìm kiếm ở header
 
     if (mainSearch) {
         mainSearch.addEventListener("input", function () {
             handleSearch(this.value);
         });
-    }
+    } //tìm kiếm ở main
 
-    // ===============================
-    // CLICK PRODUCT -> LƯU DATA
-    // ===============================
+    //nhấn sản phẩm
 
     products.forEach(product => {
 
     product.addEventListener("click", function(){
 
+        //lấy thông tin sản phẩm
         const name = product.querySelector(".product-name")?.innerText || "";
         const price = product.querySelector(".product-price")?.innerText || "";
         const img = product.querySelector(".product-image img")?.src || "";
         const desc = product.querySelector(".desc")?.innerText || "";
         const brand = product.querySelector(".product-brand")?.innerText || "";
 
+        //lưu vào localStorage
         const data = {
             name: name,
             price: price,
@@ -168,13 +154,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         localStorage.setItem("product", JSON.stringify(data));
 
+        //chuyển sang trang chi tiết sản phẩm
         window.location.href = "product-detail.html";
     });
-
 });
-
-
-// ===============================
 
     showProducts();
 
