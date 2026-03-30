@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng của bạn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="../Img/Trang chủ/favicon1.png" type="image/png">
+    <link rel="stylesheet" href="../Trang_chủ.css">
+    <link rel="stylesheet" href="giohang.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header id="header">
+        <nav class="thanh_header">
+            <div id="logo_header-search">
+                <div class="ham_menu">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="logo_header">
+                    <a href="./index.html">
+                        <img id="img1" src="../Img/Header/logoheader.png" alt="logo_header">
+                        <img src="../Img/Trang chủ/Logo01.png" alt="">
+                    </a>
+                </div>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                    <input id="input_search" type="search" placeholder="Tìm kiếm sản phẩm">
+                </div>
+            </div>
+
+            <div id="nav">
+                <div id="nav-button_dang_nhap">
+                    <a href="../Đăng nhập/Đăng_nhập.html">
+                        <i class="fa-regular fa-user" style="color: #000000; font-size: 18px;"></i>
+                        <span>Đăng nhập</span>
+                    </a>
+                </div>
+                <div id="gioi-thieu"><a href="../Giới thiệu/gioithieu.html">Giới thiệu</a></div>
+                <div id="dich_vu"><a href="../Dịch vụ/Dịch_vụ.html">Dịch vụ</a></div>
+                <div id="san_pham"><a href="../Sản phẩm/Sản_phẩm.html">Sản phẩm</a></div>
+                <div id="lien_he"><a href="../Liên hệ/lienhe.html">Liên hệ</a></div>
+            </div>
+
+            <div id="dang_nhap-cart">
+                <div class="search_mini">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </div>
+                <div id="cart">
+                    <a href="#">
+                        <i class="fa-solid fa-cart-shopping" style="color: #000000; font-size: 18px;"></i>
+                        <span> Giỏ hàng</span>
+                    </a>
+                </div>
+                <div id="button_dang_nhap">
+                    <a href="../Đăng nhập/Đăng_nhập.html">
+                        <i class="fa-regular fa-user" style="color: #000000; font-size: 18px;"></i>
+                        <span>Đăng nhập</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="cart-container">
+        <div class="cart-wrapper">
+            <h1 class="cart-title">GIỎ HÀNG</h1>
+
+            <div class="cart-table">
+                <div class="table-header">
+                    <div class="col-check"><input type="checkbox" id="check-all" checked></div>
+                    <div class="col-info">Sản phẩm</div>
+                    <div class="col-size">Size</div>
+                    <div class="col-price">Đơn giá</div>
+                    <div class="col-qty">Số lượng</div>
+                    <div class="col-total">Số tiền</div>
+                    <div class="col-action"></div>
+                </div>
+
+                <div id="cart-items-container"></div>
+            </div>
+
+            <div class="cart-summary">
+                <div class="summary-left">
+                    <span>Tổng sản phẩm: <strong id="selected-count">0</strong></span>
+                </div>
+                <div class="summary-right">
+                    <div class="total-group">
+                        <span>Tổng thanh toán:</span>
+                        <strong id="total-price">0đ</strong>
+                    </div>
+                    <button class="btn-checkout" onclick="checkout()">Mua hàng</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="giohang.js"></script>
+</body>
+
+</html>

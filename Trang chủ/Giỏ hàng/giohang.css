@@ -1,0 +1,178 @@
+* {
+    --primary-neon: #49FFB4;
+    --bg-dark: #0f172a;
+    --glass-bg: rgba(30, 41, 59, 0.5);
+}
+
+body {
+    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.cart-container {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.cart-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.cart-title {
+    text-align: center;
+    color: var(--primary-neon);
+    text-shadow: 0 0 15px rgba(73, 255, 180, 0.4);
+    margin-bottom: 40px;
+}
+
+/* Cấu trúc Grid cho bảng */
+.table-header, .cart-item {
+    display: grid;
+    grid-template-columns: 50px 3fr 1fr 1.2fr 1.5fr 1.2fr 50px;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+}
+
+.table-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #94a3b8;
+    font-weight: bold;
+}
+
+.cart-item {
+    background: rgba(15, 23, 42, 0.4);
+    margin-top: 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.cart-item:hover { background: rgba(30, 41, 59, 0.8); }
+
+/* Chi tiết sản phẩm */
+.product-cell { display: flex; align-items: center; gap: 15px; text-align: left; }
+.product-cell img { width: 70px; height: 70px; border-radius: 10px; object-fit: cover; }
+
+.size-box {
+    border: 1px solid white;
+    padding: 5px 12px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.qty-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.1);
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.qty-control button { background: none; border: none; color: white; cursor: pointer; font-size: 18px; }
+.item-total-val { color: var(--primary-neon); font-weight: bold; }
+.btn-delete { color: #ef4444; cursor: pointer; border: none; background: none; }
+
+/* Tổng kết */
+.cart-summary {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: 20px;
+}
+
+#total-price { font-size: 1.8rem; color: var(--primary-neon); }
+
+.btn-checkout {
+    background: var(--primary-neon);
+    color: #0f172a;
+    border: none;
+    padding: 15px 45px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-checkout:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(73, 255, 180, 0.3); }
+
+/*  RESPONSIVE TABLET (1024px)  */
+@media (max-width: 1024px) {
+    .cart-wrapper {
+        padding: 20px;
+    }
+    .table-header, .cart-item {
+        /* Giảm tỉ lệ cột để không bị tràn */
+        grid-template-columns: 40px 2fr 0.8fr 1fr 1.2fr 1fr 40px;
+    }
+}
+
+/*  RESPONSIVE MOBILE (768px)  */
+@media (max-width: 768px) {
+    /* Ẩn tiêu đề bảng vì mobile không đủ chỗ */
+    .table-header {
+        display: none;
+    }
+
+    .cart-item {
+        /* Chuyển sang Grid Areas theo thiết kế trong Wireframe */
+        grid-template-columns: 100px 1fr 1fr;
+        grid-template-areas: 
+            "img info info"
+            "img size price"
+            "qty total action";
+        gap: 15px;
+        text-align: left;
+        padding: 20px;
+    }
+
+    /* Gán các phần tử vào đúng khu vực Area */
+    .product-cell { 
+        grid-area: img; 
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+    .product-cell img { width: 100px; height: 100px; }
+    .product-cell span { grid-area: info; font-weight: bold; margin-top: 10px; }
+    
+    .size-box { grid-area: size; justify-self: start; }
+    .cart-item > div:nth-child(4) { grid-area: price; text-align: right; } /* Cột đơn giá */
+    
+    .qty-control { grid-area: qty; margin: 0; }
+    .item-total-val { grid-area: total; text-align: center; align-self: center; font-size: 1.2rem; }
+    .btn-delete { grid-area: action; justify-self: end; }
+
+    /* Căn chỉnh lại phần Tổng kết */
+    .cart-summary {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .summary-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .btn-checkout {
+        width: 100%;
+    }
+}
