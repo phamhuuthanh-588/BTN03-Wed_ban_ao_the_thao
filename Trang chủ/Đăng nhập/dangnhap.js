@@ -1,4 +1,4 @@
-
+// thêm animation che password
 const passwordInput = document.getElementById('password-input');
 const togglePassword = document.getElementById('toggle-password');
 
