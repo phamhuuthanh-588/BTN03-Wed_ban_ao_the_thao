@@ -1,4 +1,4 @@
-// Sử dụng lại hàm của thầy ở project 3, thêm vào 1 input box, thay đổi class và các id
+// Sử dụng lại hàm của thầy ở các project trong bài giảng , thêm vào 1 input box, thay đổi class và các id
 // 1. Hàm hiển thị lỗi
 function errorMessage(elmt, message) {
     const inputbox = elmt.parentElement; 

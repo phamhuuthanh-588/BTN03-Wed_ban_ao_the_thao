@@ -1,3 +1,4 @@
+// Sử dụng lại hàm của thầy ở các project trong bài giảng , thêm vào 1 input box, thay đổi class và các id
 // thêm animation che password
 const passwordInput = document.getElementById('password-input');
 const togglePassword = document.getElementById('toggle-password');
